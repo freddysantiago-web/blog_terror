@@ -1,0 +1,106 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid #222;
+}
+
+/* EL TÍTULO "VOCES DE LA COMUNIDAD" CON EFECTO NEÓN ROJO */
+h1 {
+    color: #F5F5DC;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px red; /* Resplandor neón de terror */
+}
+
+/* TÍTULOS DE LAS HISTORIAS */
+.historia h2 {
+    color: #ff3b3b;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.btn {
+    background: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: red;
+}
+
+section {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+}
+
+/* LA CAJA COMPLETA DE LA HISTORIA */
+.historia {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    border-left: 3px solid red;
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.4s;
+}
+
+.historia:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.historia p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   ESTILOS ROJIZOS DE DESPLIEGUE (COMO LOS ANTERIORES)
+   ========================================================================== */
+details {
+    margin-top: 15px;
+    background: rgba(255, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+details[open] {
+    border-color: red;
+    background: rgba(255, 0, 0, 0.08);
+}
+
+summary {
+    color: #FFD700;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    transition: 0.3s;
+    user-select: none;
+}
+
+summary:hover {
+    color: red !important;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+details p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    border-top: 1px dashed rgba(255, 0, 0, 0.3);
+    padding-top: 10px;
+    padding-left: 0;
+    color: #eee !important;
+}
