@@ -8,47 +8,74 @@
 </head>
 <body>
 
+    <!-- EL HEADER: Con tu banner de fondo -->
     <header>
-        <p><em>Explorando los misterios del mundo...</em></p>
-        <h1>El Cronista de lo Desconocido</h1>
+        <div class="header-content">
+            <p><em>Explorando los misterios del mundo...</em></p>
+            <h1>El Cronista de lo Desconocido</h1>
+            
+            <!-- LOS BOTONES AMARILLOS: Van aquí arriba, debajo del título -->
+            <nav>
+                <a href="relatos-terrorificos.html" class="btn">Relatos Terroríficos</a>
+                <a href="voces-de-la-comunidad.html" class="btn">Voces de la Comunidad</a>
+                <a href="clasicos.html" class="btn">Relatos Clásicos</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- SECCIÓN DE SECCIONES PRINCIPALES -->
-        <section class="secciones-web">
-            <h2>Explora el Contenido</h2>
-            <div class="contenedor-tarjetas">
-                
-                <!-- TARJETA 1: RELATOS TERRORÍFICOS -->
-                <div class="tarjeta">
-                    <img src="Img/taxi.jpg" alt="Sección Relatos Terroríficos">
-                    <h3>Relatos Terroríficos</h3>
-                    <p>Historias cortas que desafían la lógica y despiertan tus peores pesadillas.</p>
-                    <!-- CORREGIDO: Enlace limpio hacia relatos-terrorificos.html -->
-                    <a href="relatos-terrorificos.html" class="btn">Entrar a la sección</a>
+    <!-- LAS HISTORIAS: Van abajo del todo y usan el diseño original de tarjetas -->
+    <section>
+        <h2>Historias Destacadas</h2>
+        
+        <div class="cards">
+            
+            <!-- HISTORIA 1 -->
+            <div class="card">
+                <img src="Img/taxi.jpg" alt="Relato 1">
+                <div class="card-content">
+                    <span class="card-title">¿Pasajero del más allá?</span>
+                    <p class="card-text">Un taxista nocturno recoge a una mujer en el cementerio...</p>
+                    <details>
+                        <summary style="color: #FFD700; cursor: pointer; font-size: 12px;"><strong>Desplegar historia...</strong></summary>
+                        <p class="card-text" style="margin-top: 10px; color: #fff;">
+                            Al avanzar un par de calles, el taxista miró por el retrovisor y la parte trasera estaba completamente vacía, dejando únicamente un rastro de humedad y un frío helado en el asiento.
+                        </p>
+                    </details>
                 </div>
-
-                <!-- TARJETA 2: VOCES DE LA COMUNIDAD -->
-                <div class="tarjeta">
-                    <img src="Img/sotano.jpg" alt="Sección Voces de la Comunidad">
-                    <h3>Voces de la Comunidad</h3>
-                    <p>Experiencias reales, anécdotas y testimonios enviados por nuestros lectores.</p>
-                    <!-- CORREGIDO: Enlace limpio hacia voces-de-la-comunidad.html -->
-                    <a href="voces-de-la-comunidad.html" class="btn">Entrar a la sección</a>
-                </div>
-
-                <!-- TARJETA 3: RELATOS CLÁSICOS -->
-                <div class="tarjeta">
-                    <img src="Img/sombra.jpg" alt="Sección Relatos Clásicos">
-                    <h3>Relatos Clásicos</h3>
-                    <p>Mitos antiguos, leyendas urbanas históricas y cuentos tradicionales de terror.</p>
-                    <!-- CORREGIDO: Enlace limpio hacia clasicos.html -->
-                    <a href="clasicos.html" class="btn">Entrar a la sección</a>
-                </div>
-
             </div>
-        </section>
-    </main>
+
+            <!-- HISTORIA 2 -->
+            <div class="card">
+                <img src="Img/sotano.jpg" alt="Relato 2">
+                <div class="card-content">
+                    <span class="card-title">El reflejo en el espejo</span>
+                    <p class="card-text">Se mudó a una casa vieja y descubrió algo extraño en el baño...</p>
+                    <details>
+                        <summary style="color: #FFD700; cursor: pointer; font-size: 12px;"><strong>Desplegar historia...</strong></summary>
+                        <p class="card-text" style="margin-top: 10px; color: #fff;">
+                            Cuando parpadeaba, su reflejo tardaba un segundo más en hacerlo. Anoche, el reflejo le sonrió mientras él permanecía completamente serio.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- HISTORIA 3 -->
+            <div class="card">
+                <img src="Img/sombra.jpg" alt="Relato 3">
+                <div class="card-content">
+                    <span class="card-title">La ventana del piso 4</span>
+                    <p class="card-text">Todas las noches, una sombra saluda desde un edificio abandonado...</p>
+                    <details>
+                        <summary style="color: #FFD700; cursor: pointer; font-size: 12px;"><strong>Desplegar historia...</strong></summary>
+                        <p class="card-text" style="margin-top: 10px; color: #fff;">
+                            Investigando con binoculares, se dio cuenta de que la silueta no estaba parada frente a la ventana, sino colgada del techo de la habitación.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 El Cronista de lo Desconocido</p>
