@@ -8,7 +8,7 @@ body {
 
 header {
     height: 100vh;
-    /* CORREGIDO: Ruta ajustada para buscar la imagen dentro de la carpeta Img/ */
+    /* CORREGIDO: "../" para salir de la carpeta css y entrar a Img */
     background: url("../Img/banner.jpg") no-repeat center center/cover;
     display: flex;
     justify-content: center;
@@ -25,10 +25,20 @@ header::before {
     background: rgba(0, 0, 0, 0.65);
 }
 
-/* ADAPTADO: Añadido soporte para el flujo del contenido del header */
-header h1, header p, header .btn {
+.header-content {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; /* Espacio debajo del título */
 }
 
 h1,
@@ -41,10 +51,12 @@ h2 {
 h1 {
     font-size: 3rem;
     animation: flicker 3s infinite;
+    margin: 0;
 }
 
 header p {
     opacity: 0.8;
+    margin-bottom: 10px;
 }
 
 .btn {
@@ -63,11 +75,7 @@ header p {
     transform: scale(1.05);
 }
 
-main {
-    width: 100%;
-}
-
-section.secciones-web {
+section {
     padding: 40px;
     max-width: 1000px;
     margin: auto;
@@ -77,8 +85,7 @@ section.secciones-web {
     align-items: center;
 }
 
-/* CORREGIDO: Cambiado de '.cards' a '.contenedor-tarjetas' (como en tu HTML) */
-.contenedor-tarjetas {
+.cards {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -86,8 +93,7 @@ section.secciones-web {
     margin-top: 30px;
 }
 
-/* CORREGIDO: Cambiado de '.card' a '.tarjeta' (como en tu HTML) */
-.tarjeta {
+.card {
     width: 250px;
     background-color: #0a0a0a;
     border-radius: 5px;
@@ -99,34 +105,34 @@ section.secciones-web {
     flex-direction: column;
 }
 
-.tarjeta:hover {
+.card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 0 20px red;
 }
 
-/* CORREGIDO: Controla el tamaño de las imágenes para que no salgan gigantes */
-.tarjeta img {
+.card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
 
-/* ADAPTADO: Estilos para los textos internos de tus nuevas tarjetas */
-.tarjeta h3 {
-    color: red;
-    font-weight: bold;
-    margin: 15px 15px 5px 15px;
+.card-content {
+    padding: 15px;
     text-align: left;
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.tarjeta p {
+.card-title {
+    color: red;
+    font-weight: bold;
+}
+
+.card-text {
     font-size: 13px;
     color: #ccc;
     line-height: 1.4;
-    padding: 0 15px 15px 15px;
-    text-align: left;
-    margin: 0;
 }
 
 footer {
@@ -163,15 +169,14 @@ footer {
     }
 }
 
-/* RESPONSIVE DESIGN CORREGIDO */
 @media (max-width: 600px) {
     h1 {
         font-size: 2rem;
     }
-    section.secciones-web {
+    section {
         padding: 20px;
     }
-    .tarjeta {
+    .card {
         width: 90%;
     }
 }
